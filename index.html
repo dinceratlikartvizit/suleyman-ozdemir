@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1e3d8f">
+<title>Prof. Dr. Süleyman Özdemir</title>
+<meta name="description" content="Prof. Dr. Süleyman Özdemir · Rektör · İstanbul Esenyurt Üniversitesi">
+<style>
+  :root {
+    --blue: #1e3d8f;
+    --blue-dark: #152c69;
+    --ink: #1c2333;
+    --muted: #5b6475;
+    --line: #e3e7ef;
+    --bg: #f3f5f9;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.45;
+    -webkit-text-size-adjust: 100%;
+  }
+  main {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 20px 16px calc(32px + env(safe-area-inset-bottom));
+  }
+  .lang {
+    display: flex; justify-content: flex-end; gap: 4px; margin-bottom: 12px;
+  }
+  .lang button {
+    font: inherit; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--line); background: var(--card); color: var(--muted);
+    padding: 5px 10px; border-radius: 999px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+  header { text-align: center; margin-bottom: 18px; }
+  h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .role { margin: 0; color: var(--blue); font-weight: 600; }
+  .org { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+
+  .card-view {
+    background: var(--card); border-radius: 14px; padding: 10px;
+    box-shadow: 0 1px 2px rgba(20,30,60,.06), 0 8px 24px rgba(20,30,60,.08);
+  }
+  .card-view img {
+    display: block; width: 100%; height: auto; border-radius: 8px;
+    aspect-ratio: 85 / 55; object-fit: cover; background: #fff;
+  }
+  .card-view img + img { margin-top: 10px; }
+  .js .card-view img + img { margin-top: 0; }
+  .js .card-view img[hidden] { display: none; }
+  .tabs { display: none; }
+  .js .tabs {
+    display: flex; gap: 6px; justify-content: center; margin-top: 10px;
+  }
+  .tabs button {
+    font: inherit; font-size: 14px; border: 0; cursor: pointer;
+    background: var(--bg); color: var(--muted); padding: 7px 14px; border-radius: 999px;
+  }
+  .tabs button[aria-selected="true"] { background: var(--blue); color: #fff; }
+
+  .save {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin: 18px 0 12px; padding: 16px; border-radius: 12px;
+    background: var(--blue); color: #fff; text-decoration: none;
+    font-size: 17px; font-weight: 700;
+    box-shadow: 0 6px 16px rgba(30,61,143,.25);
+  }
+  .save:active { background: var(--blue-dark); }
+
+  .actions { list-style: none; margin: 0; padding: 0; background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+  .actions li + li { border-top: 1px solid var(--line); }
+  .actions a {
+    display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+    color: var(--ink); text-decoration: none; min-height: 56px;
+  }
+  .actions a:active { background: var(--bg); }
+  .icon {
+    flex: none; width: 36px; height: 36px; border-radius: 10px;
+    display: grid; place-items: center; background: #e9eefa; color: var(--blue);
+  }
+  .icon svg { width: 18px; height: 18px; }
+  .label { display: block; font-size: 13px; color: var(--muted); }
+  .value { display: block; font-size: 16px; font-weight: 600; word-break: break-word; }
+  .fax { padding: 12px 16px; color: var(--muted); font-size: 14px; }
+
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 20px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <div class="lang" role="group" aria-label="Dil / Language">
+    <button type="button" data-set-lang="tr" aria-pressed="true">TR</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+
+  <header>
+    <h1>Prof. Dr. Süleyman Özdemir</h1>
+    <p class="role" data-tr="Rektör" data-en="Rector">Rektör</p>
+    <p class="org" data-tr="İstanbul Esenyurt Üniversitesi" data-en="Istanbul Esenyurt University">İstanbul Esenyurt Üniversitesi</p>
+  </header>
+
+  <section class="card-view" aria-label="Kartvizit">
+    <img id="img-tr" src="img/on-yuz.jpg" width="1200" height="776" alt="Kartvizit – Türkçe yüz">
+    <img id="img-en" src="img/arka-yuz.jpg" width="1200" height="776" alt="Business card – English side">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" data-show="img-tr" aria-selected="true">Türkçe</button>
+      <button type="button" role="tab" data-show="img-en" aria-selected="false">English</button>
+    </div>
+  </section>
+
+  <a class="save" href="suleyman-ozdemir.vcf" download="Suleyman-Ozdemir.vcf">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+    <span data-tr="Rehbere Kaydet" data-en="Save Contact">Rehbere Kaydet</span>
+  </a>
+
+  <ul class="actions">
+    <li><a href="tel:+905324211983">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+      <span><span class="label" data-tr="Cep telefonu" data-en="Mobile">Cep telefonu</span><span class="value">+90 532 421 19 83</span></span>
+    </a></li>
+    <li><a href="tel:+902126229000">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+      <span><span class="label" data-tr="Ofis telefonu" data-en="Office phone">Ofis telefonu</span><span class="value">+90 212 622 90 00</span></span>
+    </a></li>
+    <li><a href="mailto:rektor@esenyurt.edu.tr">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+      <span><span class="label" data-tr="E-posta" data-en="Email">E-posta</span><span class="value">rektor@esenyurt.edu.tr</span></span>
+    </a></li>
+    <li><a href="https://www.esenyurt.edu.tr" target="_blank" rel="noopener">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+      <span><span class="label" data-tr="Web sitesi" data-en="Website">Web sitesi</span><span class="value">www.esenyurt.edu.tr</span></span>
+    </a></li>
+    <li><a href="https://www.google.com/maps/search/?api=1&amp;query=%C4%B0stanbul+Esenyurt+%C3%9Cniversitesi" target="_blank" rel="noopener">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <span><span class="label" data-tr="Adres" data-en="Address">Adres</span><span class="value" data-tr="Zafer Mah. Adile Naşit Bulvarı No:1, Esenyurt / İstanbul" data-en="Zafer Mah. Adile Naşit Bulvarı No:1, Esenyurt / Istanbul, Türkiye">Zafer Mah. Adile Naşit Bulvarı No:1, Esenyurt / İstanbul</span></span>
+    </a></li>
+  </ul>
+  <p class="fax"><span data-tr="Faks" data-en="Fax">Faks</span>: +90 212 699 09 90</p>
+
+  <footer>İstanbul Esenyurt Üniversitesi · <a href="https://www.esenyurt.edu.tr" rel="noopener">esenyurt.edu.tr</a></footer>
+</main>
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+
+  var tabs = document.querySelectorAll('[data-show]');
+  function show(id) {
+    for (var i = 0; i < tabs.length; i++) {
+      var t = tabs[i], on = t.getAttribute('data-show') === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      document.getElementById(t.getAttribute('data-show')).hidden = !on;
+    }
+  }
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    var els = document.querySelectorAll('[data-tr]');
+    for (var i = 0; i < els.length; i++) els[i].textContent = els[i].getAttribute('data-' + lang);
+    var btns = document.querySelectorAll('[data-set-lang]');
+    for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-pressed', btns[j].getAttribute('data-set-lang') === lang ? 'true' : 'false');
+    show(lang === 'en' ? 'img-en' : 'img-tr');
+  }
+
+  for (var i = 0; i < tabs.length; i++) tabs[i].addEventListener('click', function () { show(this.getAttribute('data-show')); });
+  var langBtns = document.querySelectorAll('[data-set-lang]');
+  for (var j = 0; j < langBtns.length; j++) langBtns[j].addEventListener('click', function () { setLang(this.getAttribute('data-set-lang')); });
+
+  var nav = (navigator.language || 'tr').toLowerCase();
+  setLang(nav.indexOf('tr') === 0 ? 'tr' : 'en');
+})();
+</script>
+</body>
+</html>

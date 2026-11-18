@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Özdemir;Süleyman;;Prof. Dr.;
+FN:Prof. Dr. Süleyman Özdemir
+ORG:İstanbul Esenyurt Üniversitesi
+TITLE:Rektör
+TEL;TYPE=CELL,VOICE:+905324211983
+TEL;TYPE=WORK,VOICE:+902126229000
+TEL;TYPE=WORK,FAX:+902126990990
+EMAIL;TYPE=INTERNET,WORK:rektor@esenyurt.edu.tr
+URL;TYPE=WORK:https://www.esenyurt.edu.tr
+ADR;TYPE=WORK:;;Zafer Mah. Adile Naşit Bulvarı No:1;Esenyurt;İstanbul;;Türkiye
+END:VCARD
